@@ -1,0 +1,80 @@
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 26px 60px;
+
+  .logoBox {
+    width: 102px;
+    height: 32px;
+  }
+  .headerLeft{
+    display: flex;
+    align-items: center;
+    .navBox {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      margin-right: 80px;
+  
+      .navItem {
+        margin-right: 50px;
+        font-size: 16px;
+        cursor: pointer;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+  
+        p {
+          font-size: 16px;
+  
+        }
+      }
+  
+      .navDropdown {
+        display: flex;
+        align-items: center;
+  
+        img {
+          width: 16px;
+          height: 16px;
+          margin-left: 8px;
+        }
+      }
+    }
+  
+    .launchBox {
+      width: 144px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+      background-image: linear-gradient(to right, #000, #000), linear-gradient(90deg, rgba(72, 206, 255, 1) 0%, rgba(255, 209, 44, 1) 100%);
+      // animation: hueRotate 10s infinite alternate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      p {
+        background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        line-height: 16px;
+      }
+    }
+  
+    @keyframes hueRotate {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+  }
+
+ 
+}
