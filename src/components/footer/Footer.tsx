@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Footer.less'
 import LogoSvg from '../../assets/logo.svg'
 
