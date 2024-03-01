@@ -8,6 +8,7 @@ import IndexBgThr from '../../assets/index/indexBgThr.svg'
 import IndexBgFour from '../../assets/index/indexBgFour.svg'
 import IndexBgFive from '../../assets/index/indexBgFive.svg'
 import LeftArrow from '../../assets/index/leftArrow.svg'
+import DataStorageImage from './dataStorage.png'
 import { Button, Input } from 'antd';
 
 export default function Home() {
@@ -78,7 +79,7 @@ export default function Home() {
           </div>
           <div className='builderContent'>
             <div className='builderContentItem'>
-              <img className='contentIcon' src="https://sft-img.b-cdn.net/network/dataStorage.png" alt="" />
+              <img className='contentIcon' src={DataStorageImage} alt="" />
               <p className='contentTitle'>Web3 Hardware Data Storage</p>
               <p className='contentInfo'>
                 SFT Chain adopts HDFS, distributing data storage across multiple nodes

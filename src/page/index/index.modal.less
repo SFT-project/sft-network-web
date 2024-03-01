@@ -181,6 +181,7 @@
       font-size: 70px;
       font-style: normal;
       font-weight: 700;
+      line-height: 80px;
 
       span {
         font-family: "Helvetica Neue";
@@ -225,6 +226,7 @@
         font-style: normal;
         font-weight: 700;
         margin-top: 40px;
+        line-height: 40px;
       }
 
       .contentInfo {
@@ -234,6 +236,7 @@
         font-style: normal;
         font-weight: 400;
         margin-top: 32px;
+        line-height: 22px;
       }
     }
   }
@@ -255,6 +258,7 @@
         font-size: 70px;
         font-style: normal;
         font-weight: 700;
+        line-height: 80px;
       }
 
       .globalLeftInfo {
@@ -264,6 +268,7 @@
         font-style: normal;
         font-weight: 500;
         margin-top: 48px;
+        line-height: 44px;
       }
 
       .globalLeftBtn {
@@ -295,16 +300,16 @@
       font-style: normal;
       font-weight: 700;
       width: 950px;
+      line-height: 80px;
     }
 
     .launchpadCon {
       display: flex;
-      align-items: center;
       margin-top: 48px;
-      justify-content: space-between;
+      gap: 40px;
 
       .launchpadConLeft {
-        width: 414px;
+        flex: 1;
 
         .launchpadConLeftTitle {
           color: rgba(255, 255, 255, 0.80);
@@ -337,43 +342,18 @@
       .launchpadConRight {
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
+        gap: 40px;
+        width: 866px;
 
         .launchpadConRightItem {
           border-radius: 20px;
           border: 1px solid rgba(255, 255, 255, 0.20);
-          background: linear-gradient(256deg, #0C1318 13.29%, #0E0F27 96.61%);
+          background: linear-gradient(1deg, #071D25 1.43%, #17333D 99.14%);
           width: 413px;
           height: 212px;
           flex-shrink: 0;
           padding: 40px;
           box-sizing: border-box;
-          margin-left: 40px;
-          margin-top: 40px;
-
-          &:first-child {
-            margin-left: 0px;
-
-          }
-
-          &:nth-child(2) {
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.20);
-            background: linear-gradient(256deg, #0D0E1E 13.29%, #1C0D26 96.61%);
-          }
-
-          &:nth-child(3) {
-            margin-left: 0px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.20);
-            background: linear-gradient(256deg, #0D1C1F 13.29%, #0C1C10 96.61%);
-          }
-
-          &:nth-child(4) {
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.20);
-            background: linear-gradient(256deg, #0F0D1F 13.29%, #181C0C 96.61%);
-          }
 
           p {
             color: #FFF;
@@ -429,7 +409,8 @@
       font-style: normal;
       font-weight: 400;
       line-height: 32px;
-      margin-top: 24px;
+      width: 935px;
+      margin: 24px auto 0;
     }
 
     .communityBox {
@@ -513,6 +494,11 @@
           font-size: 22px;
           font-style: normal;
           font-weight: 400;
+          padding: 8px 24px 4px;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+          }
         }
 
         .inputBtn {
@@ -522,6 +508,17 @@
           background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%) !important;
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px;
+          text-shadow: 0px 0px 50px rgba(89, 90, 255, 0.40);
+          font-size: 22px;
+          font-family: "Helvetica Neue";
+          color: #000;
+          font-weight: 500;
+          border: none;
+
+          span {
+            position: relative;
+            top: 4px;
+          }
         }
       }
     }
