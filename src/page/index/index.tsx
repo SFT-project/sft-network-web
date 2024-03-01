@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { init } from './earth.js'
 
 import './index.modal.less';
 
@@ -29,6 +30,10 @@ export default function Home() {
     const randomY2 = Math.random() * 100;
     return `M10 ${randomX1} Q ${randomX1} ${randomY1}, ${randomX2} ${randomY2} T ${randomX1} ${randomX1}`;
   }
+
+  useEffect(() => {
+    init()
+  }, [])
 
   return (
     <div className='homeBox'>
@@ -104,18 +109,19 @@ export default function Home() {
           </div>
           <div className='globalBox'>
             <div className='earthBox'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="634" height="634" viewBox="0 0 634 634" fill="none">
-                <path d="M317 634C492.074 634 634 492.074 634 317C634 141.926 492.074 0 317 0C141.926 0 0 141.926 0 317C0 492.074 141.926 634 317 634Z" fill="url(#paint0_radial_10209_23)" />
-                <defs>
-                  <radialGradient id="paint0_radial_10209_23" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(317.009 311.66) scale(324.39)">
-                    <stop offset="0.7502" stop-color="#112D35" stop-opacity="0.19" />
-                    <stop offset="0.8094" stop-color="#101010" stop-opacity="0.3822" />
-                    <stop offset="0.8691" stop-color="#04181F" stop-opacity="0.5756" />
-                    <stop offset="0.929" stop-color="#000F14" stop-opacity="0.7697" />
-                    <stop offset="0.9885" stop-color="#033240" />
-                  </radialGradient>
-                </defs>
-              </svg>
+              {/*<svg xmlns="http://www.w3.org/2000/svg" width="634" height="634" viewBox="0 0 634 634" fill="none">*/}
+              {/*  <path d="M317 634C492.074 634 634 492.074 634 317C634 141.926 492.074 0 317 0C141.926 0 0 141.926 0 317C0 492.074 141.926 634 317 634Z" fill="url(#paint0_radial_10209_23)" />*/}
+              {/*  <defs>*/}
+              {/*    <radialGradient id="paint0_radial_10209_23" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(317.009 311.66) scale(324.39)">*/}
+              {/*      <stop offset="0.7502" stop-color="#112D35" stop-opacity="0.19" />*/}
+              {/*      <stop offset="0.8094" stop-color="#101010" stop-opacity="0.3822" />*/}
+              {/*      <stop offset="0.8691" stop-color="#04181F" stop-opacity="0.5756" />*/}
+              {/*      <stop offset="0.929" stop-color="#000F14" stop-opacity="0.7697" />*/}
+              {/*      <stop offset="0.9885" stop-color="#033240" />*/}
+              {/*    </radialGradient>*/}
+              {/*  </defs>*/}
+              {/*</svg>*/}
+              <div id="container"></div>
             </div>
             <div className='globalLeft'>
               <p className='globalLeftTitle'>Global Distributed Nodes</p>
