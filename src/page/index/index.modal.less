@@ -69,17 +69,22 @@
       }
     }
 
-    .topBtn {
+    .topBtnContainer {
       width: 198px;
       height: 49px;
+      margin: 200px auto 0;
       flex-shrink: 0;
+    }
+
+    .topBtn {
       border-radius: 10px;
       background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto;
-      margin-top: 200px;
+      height: 49px;
+      z-index: 2;
 
       p {
         color: #000;
@@ -212,6 +217,18 @@
       border-radius: 20px;
       background: rgba(38, 38, 38, 0.60);
       backdrop-filter: blur(15px);
+      cursor: pointer;
+      position: relative;
+      bottom: 0;
+      transition: bottom 0.3s;
+
+      &:hover {
+        bottom: 10px;
+        background-image: url('./corner.svg');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 150px;
+      }
 
       .contentIcon {
         width: 100px;
@@ -271,9 +288,14 @@
         line-height: 44px;
       }
 
-      .globalLeftBtn {
+      .globalLeftBtnContainer {
         width: 348px;
         height: 60px;
+      }
+
+      .globalLeftBtn {
+        position: relative;
+        z-index: 2;
         color: #000;
         text-align: center;
         text-shadow: 0px 0px 50px rgba(89, 90, 255, 0.40);
@@ -320,10 +342,15 @@
           line-height: 44px;
         }
 
-        .launchpadConLeftInfo {
+        .launchpadConLeftInfoContainer {
           width: 348px;
           height: 60px;
           flex-shrink: 0;
+        }
+
+        .launchpadConLeftInfo {
+          position: relative;
+          z-index: 2;
           border-radius: 10px;
           background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
           color: #000;
@@ -524,4 +551,52 @@
     }
   }
 
+  .ButtonContainer {
+    position: relative;
+    cursor: pointer;
+    bottom: 0;
+    right: 0;
+    transition: bottom 0.3s, right 0.3s;
+
+    @space: 5px;
+    @border: 1px;
+    &:hover {
+      bottom: 3px;
+      right:  3px;
+
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:before,
+    &:after {
+      cursor: pointer;
+      position: absolute;
+      content: '';
+      display: block;
+      border-radius: 10px;
+    }
+
+    &:before {
+      top: @space + @border;
+      right: -@space + @border;
+      left: @space + @border;
+      bottom: -@space + @border;
+      background: #041218;
+      z-index: 1;
+    }
+
+    &:after {
+      opacity: 0;
+      transition: opacity 0.3s;
+      top: @space;
+      right: -@space;
+      left: @space;
+      bottom: -@space;
+      background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
+      z-index: 0;
+    }
+  }
 }

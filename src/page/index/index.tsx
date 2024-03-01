@@ -50,13 +50,15 @@ export default function Home() {
               <span> DePIN</span>
             </p>
           </div>
-          <div className='topBtn'>
-            <p> Get Started</p>
-            <img src={LeftArrow} alt="LeftArrow" />
+          <div className="topBtnContainer ButtonContainer">
+            <div className="topBtn">
+              <p> Get Started</p>
+              <img src={LeftArrow} alt="LeftArrow" />
+            </div>
           </div>
         </div>
-        <div className='homeDataBox'>
-          <div className='homeDataBoxItem'>
+        <div className="homeDataBox">
+          <div className="homeDataBoxItem">
             <p>22,455</p>
             <span>DEVICES</span>
           </div>
@@ -118,21 +120,25 @@ export default function Home() {
             <div className='globalLeft'>
               <p className='globalLeftTitle'>Global Distributed Nodes</p>
               <p className='globalLeftInfo'>SFT Chain aims to build a distributed network of the most crucial hardware infrastructure for human society.</p>
-              <div className='globalLeftBtn'>
-                Explore the DePIN
+              <div className="globalLeftBtnContainer ButtonContainer">
+                <div className="globalLeftBtn">
+                  Explore the DePIN
+                </div>
               </div>
             </div>
           </div>
-          <div className='launchpadBox'>
-            <p className='launchpadTitle'>A Launchpad for Blockchain Ideas and Projects</p>
+          <div className="launchpadBox">
+          <p className='launchpadTitle'>A Launchpad for Blockchain Ideas and Projects</p>
             <div className='launchpadCon'>
               <div className='launchpadConLeft'>
                 <p className='launchpadConLeftTitle'>The SFT Chain hosts an ever-growing ecosystem of projects and products that have been developed by members of the SFT community</p>
-                <div className='launchpadConLeftInfo'>
-                  Explore DApp
+                <div className="launchpadConLeftInfoContainer ButtonContainer">
+                  <div className="launchpadConLeftInfo">
+                    Explore DApp
+                  </div>
                 </div>
               </div>
-              <div className='launchpadConRight'>
+              <div className="launchpadConRight">
                 <div className='launchpadConRightItem'>
                   <p>Decentralized</p>
                   <div className='launchpadConRightItemImgBox'>
