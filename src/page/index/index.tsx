@@ -11,16 +11,15 @@ import LeftArrow from '../../assets/index/leftArrow.svg'
 import { Button, Input } from 'antd';
 
 export default function Home() {
-
   const [randomPath, setRandomPath] = useState(getRandomPath);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setRandomPath(getRandomPath());
-    }, 3000);
-
-    return () => clearInterval(intervalId); // Cleanup on unmount
-  }, []);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setRandomPath(getRandomPath());
+  //   }, 3000);
+  //
+  //   return () => clearInterval(intervalId); // Cleanup on unmount
+  // }, []);
 
   function getRandomPath() {
     const randomX1 = Math.random() * 100;
@@ -29,7 +28,6 @@ export default function Home() {
     const randomY2 = Math.random() * 100;
     return `M10 ${randomX1} Q ${randomX1} ${randomY1}, ${randomX2} ${randomY2} T ${randomX1} ${randomX1}`;
   }
-
 
   return (
     <div className='homeBox'>

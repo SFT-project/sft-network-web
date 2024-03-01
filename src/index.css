@@ -1,4 +1,58 @@
-*{
-  padding: 0;
-  margin: 0;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url("/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url("/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/HelveticaNeueLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/HelveticaNeueMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/HelveticaNeueBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "DIN Alternate";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/DIN-Alternate-Bold.ttf");
+}
+
+body {
+    background: #041218;
+    font-family: Inter, serif;
 }

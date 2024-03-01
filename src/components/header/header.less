@@ -6,6 +6,8 @@
   padding: 26px 60px;
   position: relative;
   z-index: 999;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .logoBox {
     width: 102px;
@@ -19,26 +21,26 @@
       display: flex;
       align-items: center;
       margin-right: 80px;
-  
+
       .navItem {
         margin-right: 50px;
         font-size: 16px;
         cursor: pointer;
-  
+
         &:last-child {
           margin-right: 0;
         }
-  
+
         p {
           font-size: 16px;
-  
+
         }
       }
-  
+
       .navDropdown {
         display: flex;
         align-items: center;
-  
+
         img {
           width: 16px;
           height: 16px;
@@ -46,7 +48,7 @@
         }
       }
     }
-  
+
     .launchBox {
       width: 144px;
       height: 40px;
@@ -60,7 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-  
+
       p {
         background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
         background-clip: text;
@@ -70,7 +72,7 @@
         line-height: 16px;
       }
     }
-  
+
     @keyframes hueRotate {
       100% {
         filter: hue-rotate(360deg);
@@ -78,5 +80,5 @@
     }
   }
 
- 
+
 }
