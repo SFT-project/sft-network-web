@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { init } from './earth.js'
+import { init } from '@/page/index/earth.js'
 import './index.modal.less';
 import LeftArrow from '../../assets/index/leftArrow.svg'
 import DataStorageImage from './dataStorage.png'
