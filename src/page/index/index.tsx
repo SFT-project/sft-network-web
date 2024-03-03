@@ -1,36 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { init } from './earth.js'
-
 import './index.modal.less';
-
-import IndexBgFirst from '../../assets/index/indexBgFirst.svg'
-import IndexBgTwo from '../../assets/index/indexBgTwo.svg'
-import IndexBgThr from '../../assets/index/indexBgThr.svg'
-import IndexBgFour from '../../assets/index/indexBgFour.svg'
-import IndexBgFive from '../../assets/index/indexBgFive.svg'
 import LeftArrow from '../../assets/index/leftArrow.svg'
 import DataStorageImage from './dataStorage.png'
 import { Button, Input } from 'antd';
 
 export default function Home() {
-  const [randomPath, setRandomPath] = useState(getRandomPath);
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setRandomPath(getRandomPath());
-  //   }, 3000);
-  //
-  //   return () => clearInterval(intervalId); // Cleanup on unmount
-  // }, []);
-
-  function getRandomPath() {
-    const randomX1 = Math.random() * 100;
-    const randomY1 = Math.random() * 100;
-    const randomX2 = Math.random() * 100;
-    const randomY2 = Math.random() * 100;
-    return `M10 ${randomX1} Q ${randomX1} ${randomY1}, ${randomX2} ${randomY2} T ${randomX1} ${randomX1}`;
-  }
-
   useEffect(() => {
     init()
   }, [])
@@ -38,13 +13,6 @@ export default function Home() {
   return (
     <div className='homeBox'>
       <div className="ts-background ts-shapes-canvas position-fixed ts-separate-bg-element" data-bg-color="#fff">
-        {/*<div className='homeBoxBg'>*/}
-        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFirst} alt="" />*/}
-        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgTwo} alt="" />*/}
-        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgThr} alt="" />*/}
-        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFour} alt="" />*/}
-        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFive} alt="" />*/}
-        {/*</div>*/}
         <div className='homeBoxTop'>
           <div className='topTitle'>
             <p><span>Chain</span> of Chains</p>
