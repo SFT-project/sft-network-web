@@ -558,12 +558,16 @@
           }
         }
 
-        .launchpadConRightItem {
-          border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.20);
-          background: linear-gradient(1deg, #071D25 1.43%, #17333D 99.14%);
-          flex-shrink: 0;
+        .launchpadConRightItemBack,
+        .launchpadConRightItemFront {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          top: 0;
+          left: 0;
           padding: 40px;
+          border-radius: 20px;
           box-sizing: border-box;
 
           @media @desktop {
@@ -575,6 +579,48 @@
             flex: 1;
             padding: 16px 16px 26px;
           }
+        }
+
+        .launchpadConRightItem {
+          cursor: pointer;
+          perspective: 1000px;
+
+          @media @mobile {
+            flex: 1;
+          }
+        }
+
+        .launchpadConRightItemInner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+
+        .launchpadConRightItem:active .launchpadConRightItemInner,
+        .launchpadConRightItem:hover .launchpadConRightItemInner {
+          transform: rotateY(180deg);
+        }
+
+        .launchpadConRightItemBack {
+          background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
+          transform: rotateY(180deg);
+
+          @media @mobile {
+            font-family: "Helvetica Neue";
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+          }
+        }
+
+        .launchpadConRightItemFront {
+          border: 1px solid rgba(255, 255, 255, 0.20);
+          background: linear-gradient(1deg, #071D25 1.43%, #17333D 99.14%);
+          flex-shrink: 0;
+          box-sizing: border-box;
+          position: relative;
 
           p {
             color: #FFF;

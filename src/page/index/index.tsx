@@ -155,32 +155,64 @@ export default function Home() {
               <div className="launchpadConRight">
                 <div className="launchpadConRightRow">
                   <div className="launchpadConRightItem">
-                    <p>Decentralized</p>
-                    <div className="launchpadConRightItemImgBox">
-                      <img src="https://sft-img.b-cdn.net/network/Decentralized.png"
-                           alt="Decentralized" />
+                    <div className="launchpadConRightItemInner">
+                      <div className="launchpadConRightItemFront">
+                        <p>Decentralized</p>
+                        <div className="launchpadConRightItemImgBox">
+                          <img src="https://sft-img.b-cdn.net/network/Decentralized.png"
+                               alt="Decentralized" />
+                        </div>
+                      </div>
+                      <div className="launchpadConRightItemBack">
+                        SFT has <b>100+</b> nodes, managed in a fully decentralized manner
+                      </div>
                     </div>
                   </div>
                   <div className="launchpadConRightItem">
-                    <p>Device Ready</p>
-                    <div className="launchpadConRightItemImgBox">
-                      <img src="https://sft-img.b-cdn.net/network/DeviceReady.png"
-                           alt="Decentralized" />
+                    <div className="launchpadConRightItemInner">
+                      <div className="launchpadConRightItemFront">
+                        <p>Device Ready</p>
+                        <div className="launchpadConRightItemImgBox">
+                          <img src="https://sft-img.b-cdn.net/network/DeviceReady.png"
+                               alt="Decentralized" />
+                        </div>
+                      </div>
+                      <div className="launchpadConRightItemBack">
+                        SFT Chain is a blockchain protocol that connects real-world data
+                        with <b>DApps</b>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="launchpadConRightRow">
                   <div className="launchpadConRightItem">
-                    <p>Ultra Fast</p>
-                    <div className="launchpadConRightItemImgBox">
-                      <img src="https://sft-img.b-cdn.net/network/UltraFast.png"
-                           alt="Decentralized" />
+                    <div className="launchpadConRightItemInner">
+                      <div className="launchpadConRightItemFront">
+                        <p>Ultra Fast</p>
+                        <div className="launchpadConRightItemImgBox">
+                          <img src="https://sft-img.b-cdn.net/network/UltraFast.png"
+                               alt="Decentralized" />
+                        </div>
+                      </div>
+                      <div className="launchpadConRightItemBack">
+                        Every transaction on the SFT Chain is virtually <b>instantaneous</b> and comes with
+                        almost zero transaction costs
+                      </div>
                     </div>
                   </div>
                   <div className="launchpadConRightItem">
-                    <p>Secure & Tested</p>
-                    <div className="launchpadConRightItemImgBox">
-                      <img src="https://sft-img.b-cdn.net/network/Secure.png" alt="Decentralized" />
+                    <div className="launchpadConRightItemInner">
+                      <div className="launchpadConRightItemFront">
+                        <p>Secure & Tested</p>
+                        <div className="launchpadConRightItemImgBox">
+                          <img src="https://sft-img.b-cdn.net/network/Secure.png"
+                               alt="Decentralized" />
+                        </div>
+                      </div>
+                      <div className="launchpadConRightItemBack">
+                        SFT boasts one of the best cryptographic <b>security systems</b> in the blockchain
+                        space
+                      </div>
                     </div>
                   </div>
                 </div>
