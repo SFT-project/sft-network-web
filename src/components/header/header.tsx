@@ -2,6 +2,7 @@ import LogoSvg from '../../assets/logo.svg'
 import NavIcon from '../../assets/navIcon.svg'
 import { Dropdown, MenuProps } from 'antd';
 import { Link } from 'react-router-dom';
+import MenuSvg from './menu.svg'
 import './header.less'
 
 export default function Header() {
@@ -86,6 +87,7 @@ export default function Header() {
         <div className='launchBox'>
           <p>Launch DApp</p>
         </div>
+        <img className="headerMenu" src={MenuSvg} />
       </div>
 
     </div>

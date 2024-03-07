@@ -1,3 +1,5 @@
+@import "../varaibles";
+
 .footerBox {
   display: flex;
   justify-content: space-between;
@@ -6,14 +8,32 @@
   max-width: 1440px;
   margin: 80px auto;
 
+  @media @mobile {
+    flex-direction: column;
+    padding: 0;
+    margin: 40px auto;
+  }
+
   .footerLeft {
-    width: 883px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
 
+    @media @desktop {
+      width: 883px;
+    }
+
+    @media @mobile {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
     .footerBoxItem {
       text-align: left;
+
+      @media @mobile {
+        width: 130px;
+      }
 
       .footerBoxItemTitle {
         color: rgba(255, 255, 255, 0.6);
@@ -47,18 +67,36 @@
   }
 
   .footerRight {
-    width: 280px;
+    @media @desktop {
+      width: 280px;
+    }
+    @media @mobile {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+    }
+
     .logo {
       width: 102px;
       height: 32px;
       flex-shrink: 0;
+
+      @media @mobile {
+        width: 78px;
+        height: 26px;
+      }
     }
 
     .communityIconBox {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 76px;
+      @media @desktop {
+        margin-top: 76px;
+      }
+      @media @mobile {
+        gap: 24px;
+      }
 
       img {
         width: 24px;

@@ -1,3 +1,5 @@
+@import "../../components/varaibles";
+
 .homeBox {
   overflow: hidden;
   max-width: 1440px;
@@ -16,6 +18,10 @@
     position: relative;
     margin-top: 170px;
 
+    @media @mobile {
+      margin-top: 160px;
+    }
+
     .topTitle {
       p {
         color: #FFF;
@@ -26,12 +32,14 @@
         line-height: 130px;
         text-align: center;
 
+        @media @mobile {
+          font-size: 40px;
+        }
+
         span {
           font-family: "Helvetica Neue";
-          font-size: 130px;
           font-style: normal;
           font-weight: 700;
-          line-height: 130px;
           background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
           background-clip: text;
           -webkit-background-clip: text;
@@ -52,15 +60,18 @@
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
+
+        @media @mobile {
+          font-size: 18px;
+          line-height: 28px;
+        }
       }
 
       span {
         text-align: center;
         font-family: "Helvetica Neue";
-        font-size: 24px;
         font-style: normal;
         font-weight: 700;
-        line-height: 24px;
         background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -74,6 +85,10 @@
       height: 49px;
       margin: 200px auto 0;
       flex-shrink: 0;
+
+      @media @mobile {
+        margin-top: 80px;
+      }
     }
 
     .topBtn {
@@ -111,11 +126,25 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 0 60px;
-    margin-top: 140px;
+
+    @media @desktop {
+      padding: 0 60px;
+      margin-top: 140px;
+    }
+
+    @media @mobile {
+      margin-top: 160px;
+      flex-wrap: wrap;
+    }
 
     .homeDataBoxItem {
-      text-align: left;
+      @media @mobile {
+        width: 50%;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
 
       p {
         color: #FFF;
@@ -124,6 +153,10 @@
         font-style: normal;
         font-weight: 700;
         letter-spacing: -0.4px;
+
+        @media @mobile {
+          font-size: 24px;
+        }
       }
 
       span {
@@ -137,10 +170,25 @@
         color: transparent;
         display: inline-block;
         margin-top: 24px;
+
+        @media @mobile {
+          margin-top: 16px;
+          font-size: 16px;
+        }
+      }
+
+      &:nth-child(1) {
+        @media @mobile {
+          margin-bottom: 24px;
+        }
       }
 
       &:nth-child(2) {
         text-align: left;
+        @media @mobile {
+          text-align: right;
+          margin-bottom: 24px;
+        }
 
         span {
           background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
@@ -152,6 +200,10 @@
 
       &:nth-child(3) {
         text-align: center;
+
+        @media @mobile {
+          text-align: left;
+        }
 
         span {
           background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
@@ -180,6 +232,11 @@
     padding: 0 60px;
     margin-top: 160px;
 
+    @media @mobile {
+      margin-top: 80px;
+      padding: 0;
+    }
+
     .builderTitle {
       color: #FFF;
       font-family: "Helvetica Neue";
@@ -188,9 +245,13 @@
       font-weight: 700;
       line-height: 80px;
 
+      @media @mobile {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
       span {
         font-family: "Helvetica Neue";
-        font-size: 70px;
         font-style: normal;
         font-weight: 700;
         background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
@@ -204,15 +265,20 @@
 
   .builderContent {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 50px;
+
+    @media @desktop {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media @mobile {
+      flex-direction: column;
+      gap: 16px;
+    }
 
     .builderContentItem {
       box-sizing: border-box;
-      padding: 40px;
-      width: 413px;
-      height: 398px;
       flex-shrink: 0;
       border-radius: 20px;
       background: rgba(38, 38, 38, 0.60);
@@ -221,6 +287,18 @@
       position: relative;
       bottom: 0;
       transition: bottom 0.3s;
+
+      @media @desktop {
+        width: 413px;
+        height: 398px;
+        padding: 40px;
+      }
+
+      @media @mobile {
+        padding: 16px;
+        display: flex;
+        gap: 24px;
+      }
 
       &:hover {
         bottom: 10px;
@@ -234,6 +312,11 @@
         width: 100px;
         height: 100px;
         flex-shrink: 0;
+
+        @media @mobile {
+          width: 68px;
+          height: 68px;
+        }
       }
 
       .contentTitle {
@@ -242,18 +325,30 @@
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
-        margin-top: 40px;
         line-height: 40px;
+
+        @media @desktop {
+          margin-top: 40px;
+        }
+
+        @media @mobile {
+          font-size: 20px;
+          line-height: 26px;
+        }
       }
 
       .contentInfo {
-        color: #FFF;
+        color: rgba(255,255,255,0.6);
         font-family: "Helvetica Neue";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         margin-top: 32px;
         line-height: 22px;
+
+        @media @mobile {
+          margin-top: 8px;
+        }
       }
     }
   }
@@ -266,8 +361,15 @@
     justify-content: space-between;
     margin-top: 170px;
 
+    @media @mobile {
+      flex-direction: column-reverse;
+      margin-top: 80px;
+    }
+
     .globalLeft {
-      width: 606px;
+      @media @desktop {
+        width: 606px;
+      }
 
       .globalLeftTitle {
         color: #FFF;
@@ -276,6 +378,11 @@
         font-style: normal;
         font-weight: 700;
         line-height: 80px;
+
+        @media @mobile {
+          font-size: 30px;
+          line-height: 40px;
+        }
       }
 
       .globalLeftInfo {
@@ -286,11 +393,23 @@
         font-weight: 500;
         margin-top: 48px;
         line-height: 44px;
+
+        @media @mobile {
+          font-size: 20px;
+          line-height: 26px;
+          margin-top: 16px;
+          font-weight: 400;
+        }
       }
 
       .globalLeftBtnContainer {
         width: 348px;
         height: 60px;
+
+        @media @mobile {
+          width: 240px;
+          height: 52px;
+        }
       }
 
       .globalLeftBtn {
@@ -308,6 +427,11 @@
         line-height: 60px;
         margin-top: 48px;
 
+        @media @mobile {
+          font-size: 16px;
+          line-height: 52px;
+          margin-top: 24px;
+        }
       }
     }
   }
@@ -315,20 +439,38 @@
   .launchpadBox {
     margin-top: 160px;
 
+    @media @mobile {
+      margin-top: 80px;
+    }
+
     .launchpadTitle {
       color: #FFF;
       font-family: "Helvetica Neue";
-      font-size: 70px;
       font-style: normal;
       font-weight: 700;
-      width: 950px;
-      line-height: 80px;
+
+      @media @desktop {
+        width: 950px;
+        font-size: 70px;
+        line-height: 80px;
+      }
+
+      @media @mobile {
+        font-size: 30px;
+        line-height: 40px;
+      }
     }
 
     .launchpadCon {
-      display: flex;
-      margin-top: 48px;
-      gap: 40px;
+      @media @desktop {
+        display: flex;
+        margin-top: 48px;
+        gap: 40px;
+      }
+
+      @media @mobile {
+        margin-top: 24px;
+      }
 
       .launchpadConLeft {
         flex: 1;
@@ -340,12 +482,23 @@
           font-style: normal;
           font-weight: 500;
           line-height: 44px;
+
+          @media @mobile {
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 400;
+          }
         }
 
         .launchpadConLeftInfoContainer {
           width: 348px;
           height: 60px;
           flex-shrink: 0;
+
+          @media @mobile {
+            width: 240px;
+            height: 52px;
+          }
         }
 
         .launchpadConLeftInfo {
@@ -363,24 +516,50 @@
           line-height: 60px;
           margin-top: 48px;
 
+          @media @mobile {
+            font-size: 16px;
+            line-height: 52px;
+            margin-top: 32px;
+          }
         }
       }
 
       .launchpadConRight {
         display: flex;
-        flex-wrap: wrap;
         gap: 40px;
-        width: 866px;
+        flex-direction: column;
+
+        @media @mobile {
+          gap: 9px;
+          margin-top: 32px;
+        }
+
+        .launchpadConRightRow {
+          display: flex;
+          gap: 40px;
+
+          @media @mobile {
+            gap: 9px;
+          }
+        }
 
         .launchpadConRightItem {
           border-radius: 20px;
           border: 1px solid rgba(255, 255, 255, 0.20);
           background: linear-gradient(1deg, #071D25 1.43%, #17333D 99.14%);
-          width: 413px;
-          height: 212px;
           flex-shrink: 0;
           padding: 40px;
           box-sizing: border-box;
+
+          @media @desktop {
+            width: 413px;
+            height: 212px;
+          }
+
+          @media @mobile {
+            flex: 1;
+            padding: 16px 16px 26px;
+          }
 
           p {
             color: #FFF;
@@ -388,18 +567,33 @@
             font-size: 30px;
             font-style: normal;
             font-weight: 700;
+
+            @media @mobile {
+              font-size: 18px;
+            }
           }
 
           .launchpadConRightItemImgBox {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 8px;
+            @media @desktop {
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 8px;
+            }
+
+            @media @mobile {
+              margin-top: 40px;
+            }
           }
 
           img {
             width: 94px;
             height: 94px;
             flex-shrink: 0;
+
+            @media @mobile {
+              width: 72px;
+              height: 72px;
+            }
           }
         }
       }
@@ -411,13 +605,22 @@
     border: 1px solid rgba(255, 255, 255, 0.20);
     background: rgba(38, 38, 38, 0.60);
     backdrop-filter: blur(15px);
-    width: 1320px;
-    height: 938px;
     flex-shrink: 0;
     margin: 0 auto;
     padding: 80px;
     box-sizing: border-box;
     margin-top: 160px;
+
+    @media @desktop {
+      width: 1320px;
+      height: 938px;
+    }
+
+    @media @mobile {
+      margin-top: 80px;
+      padding: 40px 20px 64px;
+      border-radius: 20px;
+    }
 
     .joinCommunityTitle {
       color: #FFF;
@@ -426,6 +629,10 @@
       font-size: 46px;
       font-style: normal;
       font-weight: 700;
+
+      @media @mobile {
+        font-size: 24px;
+      }
     }
 
     .joinCommunityInfo {
@@ -436,24 +643,47 @@
       font-style: normal;
       font-weight: 400;
       line-height: 32px;
-      width: 935px;
       margin: 24px auto 0;
+
+      @media @desktop {
+        width: 935px;
+      }
+
+      @media @mobile {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     .communityBox {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       margin-top: 100px;
+      justify-content: space-between;
+
+      @media @mobile {
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
 
       .communityBoxItem {
         width: 250px;
         text-align: center;
 
+        @media @mobile {
+          width: 45%;
+          margin-bottom: 32px;
+        }
+
         img {
           width: 80px;
           height: 80px;
           flex-shrink: 0;
+
+          @media @mobile {
+            width: 40px;
+            height: 40px;
+          }
         }
 
         .communityBoxItemTitle {
@@ -463,6 +693,11 @@
           font-style: normal;
           font-weight: 700;
           margin-top: 40px;
+
+          @media @mobile {
+            font-size: 16px;
+            margin-top: 24px;
+          }
         }
 
         .communityBoxItemInfo {
@@ -474,6 +709,10 @@
           font-weight: 400;
           line-height: 18px;
           margin-top: 16px;
+
+          @media @mobile {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -486,8 +725,12 @@
         font-size: 34px;
         font-style: normal;
         font-weight: 700;
-        line-height: 34px;
         margin-top: 140px;
+
+        @media @mobile {
+          font-size: 22px;
+          margin-top: 64px;
+        }
       }
 
       .communitySubmitInfo {
@@ -499,29 +742,52 @@
         font-weight: 400;
         line-height: 22px;
         margin-top: 24px;
+
+        @media @mobile {
+          font-size: 18px;
+          margin-top: 16px;
+        }
       }
 
       .inputBox {
-        width: 640px;
-        height: 70px;
         flex-shrink: 0;
         display: flex;
-        margin-top: 40px;
-        margin: 0 auto;
-        margin-top: 40px;
+        margin: 40px auto 0;
+
+        @media @desktop {
+          width: 640px;
+          height: 70px;
+          margin-top: 24px;
+        }
+
+        @media @mobile {
+          height: 48px;
+        }
 
         .inputFarm {
           border-radius: 14px;
           border: 2px solid rgba(255, 255, 255, 0.10);
           background: rgba(255, 255, 255, 0.10) !important;
-          border-top-right-radius: 0px;
-          border-bottom-right-radius: 0px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
           color: #FFF;
           font-family: "Helvetica Neue";
           font-size: 22px;
           font-style: normal;
           font-weight: 400;
           padding: 8px 24px 4px;
+
+          &:focus {
+            border-color: #48CEFF;
+          }
+
+          @media @mobile {
+            border-radius: 8px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            font-size: 16px;
+            padding: 8px 16px 4px;
+          }
 
           &::placeholder {
             color: rgba(255, 255, 255, 0.2);
@@ -542,9 +808,19 @@
           font-weight: 500;
           border: none;
 
+          @media @mobile {
+            width: 82px;
+            height: 48px;
+            font-size: 14px;
+          }
+
           span {
             position: relative;
             top: 4px;
+
+            @media @mobile {
+              top: 2px;
+            }
           }
         }
       }
@@ -566,7 +842,7 @@
 
       &:before,
       &:after {
-        opacity: 1;
+        display: block;
       }
     }
 
@@ -575,8 +851,8 @@
       cursor: pointer;
       position: absolute;
       content: '';
-      display: block;
       border-radius: 10px;
+      display: none;
     }
 
     &:before {
@@ -589,7 +865,6 @@
     }
 
     &:after {
-      opacity: 0;
       transition: opacity 0.3s;
       top: @space;
       right: -@space;
@@ -608,5 +883,11 @@
     pointer-events: none;
     width: 634px;
     height: 600px;
+
+    @media @mobile {
+      width: 350px;
+      height: 310px;
+      margin-top: 40px;
+    }
   }
 }

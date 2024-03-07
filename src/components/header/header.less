@@ -1,3 +1,5 @@
+@import "../varaibles";
+
 .headerBox {
   display: flex;
   align-items: center;
@@ -9,9 +11,22 @@
   max-width: 1440px;
   margin: 0 auto;
 
+  @media @mobile {
+    padding: 16px 0;
+  }
+
   .logoBox {
-    width: 102px;
-    height: 32px;
+    img {
+      width: 102px;
+      height: 32px;
+    }
+
+    @media @mobile {
+      img {
+        width: 78px;
+        height: 26px;
+      }
+    }
   }
   .headerLeft{
     display: flex;
@@ -21,6 +36,10 @@
       display: flex;
       align-items: center;
       margin-right: 80px;
+
+      @media @mobile {
+        display: none;
+      }
 
       .navItem {
         margin-right: 50px;
@@ -64,6 +83,13 @@
       justify-content: center;
       cursor: pointer;
 
+      @media @mobile {
+        width: 122px;
+        height: 34px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
       p {
         background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
         background-clip: text;
@@ -81,5 +107,13 @@
     }
   }
 
+  .headerMenu {
+    @media @desktop {
+      display: none;
+    }
 
+    @media @mobile {
+      margin-left: 16px;
+    }
+  }
 }

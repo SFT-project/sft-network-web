@@ -38,13 +38,13 @@ export default function Home() {
   return (
     <div className='homeBox'>
       <div className="ts-background ts-shapes-canvas position-fixed ts-separate-bg-element" data-bg-color="#fff">
-        <div className='homeBoxBg'>
-          <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFirst} alt="" />
-          <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgTwo} alt="" />
-          <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgThr} alt="" />
-          <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFour} alt="" />
-          <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFive} alt="" />
-        </div>
+        {/*<div className='homeBoxBg'>*/}
+        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFirst} alt="" />*/}
+        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgTwo} alt="" />*/}
+        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgThr} alt="" />*/}
+        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFour} alt="" />*/}
+        {/*  <img style={{ offsetPath: `path('${randomPath}')` }} src={IndexBgFive} alt="" />*/}
+        {/*</div>*/}
         <div className='homeBoxTop'>
           <div className='topTitle'>
             <p><span>Chain</span> of Chains</p>
@@ -87,28 +87,36 @@ export default function Home() {
           <div className='builderContent'>
             <div className='builderContentItem'>
               <img className='contentIcon' src={DataStorageImage} alt="" />
-              <p className='contentTitle'>Web3 Hardware Data Storage</p>
-              <p className='contentInfo'>
-                SFT Chain adopts HDFS, distributing data storage across multiple nodes
-              </p>
+              <div>
+                <p className="contentTitle">Web3 Hardware Data Storage</p>
+                <p className="contentInfo">
+                  SFT Chain adopts HDFS, distributing data storage across multiple nodes
+                </p>
+              </div>
             </div>
-            <div className='builderContentItem'>
-              <img className='contentIcon' src="https://sft-img.b-cdn.net/network/High.png" alt="" />
-              <p className='contentTitle'>High-Performance Computing Cloud</p>
-              <p className='contentInfo'>
-                It is an efficient, reliable, flexible, and secure computing service
-              </p>
+            <div className="builderContentItem">
+              <img className="contentIcon" src="https://sft-img.b-cdn.net/network/High.png"
+                   alt="" />
+              <div>
+              <p className="contentTitle">High-Performance Computing Cloud</p>
+                <p className="contentInfo">
+                  It is an efficient, reliable, flexible, and secure computing service
+                </p>
+              </div>
             </div>
-            <div className='builderContentItem'>
-              <img className='contentIcon' src="https://sft-img.b-cdn.net/network/IEC.png" alt="" />
-              <p className='contentTitle'>Intelligent Edge Cloud (IEC)</p>
-              <p className='contentInfo'>
-                Deployed in closer proximity to enterprise and high-traffic user areas, providing a consistent experience with the central cloud
-              </p>
+            <div className="builderContentItem">
+              <img className="contentIcon" src="https://sft-img.b-cdn.net/network/IEC.png" alt="" />
+              <div>
+                <p className="contentTitle">Intelligent Edge Cloud (IEC)</p>
+                <p className="contentInfo">
+                  Deployed in closer proximity to enterprise and high-traffic user areas, providing
+                  a consistent experience with the central cloud
+                </p>
+              </div>
             </div>
           </div>
-          <div className='globalBox'>
-            <div className='earthBox'>
+          <div className="globalBox">
+            <div className="earthBox">
               {/*<svg xmlns="http://www.w3.org/2000/svg" width="634" height="634" viewBox="0 0 634 634" fill="none">*/}
               {/*  <path d="M317 634C492.074 634 634 492.074 634 317C634 141.926 492.074 0 317 0C141.926 0 0 141.926 0 317C0 492.074 141.926 634 317 634Z" fill="url(#paint0_radial_10209_23)" />*/}
               {/*  <defs>*/}
@@ -145,40 +153,48 @@ export default function Home() {
                 </div>
               </div>
               <div className="launchpadConRight">
-                <div className='launchpadConRightItem'>
-                  <p>Decentralized</p>
-                  <div className='launchpadConRightItemImgBox'>
-                    <img src="https://sft-img.b-cdn.net/network/Decentralized.png" alt="Decentralized" />
+                <div className="launchpadConRightRow">
+                  <div className="launchpadConRightItem">
+                    <p>Decentralized</p>
+                    <div className="launchpadConRightItemImgBox">
+                      <img src="https://sft-img.b-cdn.net/network/Decentralized.png"
+                           alt="Decentralized" />
+                    </div>
+                  </div>
+                  <div className="launchpadConRightItem">
+                    <p>Device Ready</p>
+                    <div className="launchpadConRightItemImgBox">
+                      <img src="https://sft-img.b-cdn.net/network/DeviceReady.png"
+                           alt="Decentralized" />
+                    </div>
                   </div>
                 </div>
-                <div className='launchpadConRightItem'>
-                  <p>Device Ready</p>
-                  <div className='launchpadConRightItemImgBox'>
-                    <img src="https://sft-img.b-cdn.net/network/DeviceReady.png" alt="Decentralized" />
+                <div className="launchpadConRightRow">
+                  <div className="launchpadConRightItem">
+                    <p>Ultra Fast</p>
+                    <div className="launchpadConRightItemImgBox">
+                      <img src="https://sft-img.b-cdn.net/network/UltraFast.png"
+                           alt="Decentralized" />
+                    </div>
                   </div>
-                </div>
-                <div className='launchpadConRightItem'>
-                  <p>Ultra Fast</p>
-                  <div className='launchpadConRightItemImgBox'>
-                    <img src="https://sft-img.b-cdn.net/network/UltraFast.png" alt="Decentralized" />
-                  </div>
-                </div>
-                <div className='launchpadConRightItem'>
-                  <p>Secure & Tested</p>
-                  <div className='launchpadConRightItemImgBox'>
-                    <img src="https://sft-img.b-cdn.net/network/Secure.png" alt="Decentralized" />
+                  <div className="launchpadConRightItem">
+                    <p>Secure & Tested</p>
+                    <div className="launchpadConRightItemImgBox">
+                      <img src="https://sft-img.b-cdn.net/network/Secure.png" alt="Decentralized" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className='joinCommunity'>
-            <p className='joinCommunityTitle'>Join the Community</p>
-            <p className='joinCommunityInfo'>Help shape the future of the SFT network and learn more about SFT by chatting with team members and other people in the community.</p>
-            <div className='communityBox'>
-              <div className='communityBoxItem'>
+          <div className="joinCommunity">
+            <p className="joinCommunityTitle">Join the Community</p>
+            <p className="joinCommunityInfo">Help shape the future of the SFT network and learn more
+              about SFT by chatting with team members and other people in the community.</p>
+            <div className="communityBox">
+              <div className="communityBoxItem">
                 <img src="https://sft-img.b-cdn.net/network/Telegram.png" alt="Telegram" />
-                <p className='communityBoxItemTitle'>Telegram</p>
+                <p className="communityBoxItemTitle">Telegram</p>
                 <p className='communityBoxItemInfo'>Chat and read our<br /> announcements</p>
               </div>
               <div className='communityBoxItem'>

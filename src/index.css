@@ -55,4 +55,8 @@
 body {
     background: #041218;
     font-family: Inter, serif;
+
+    @media (max-width: 767px) {
+        padding: 0 16px;
+    }
 }
