@@ -287,6 +287,7 @@
       position: relative;
       bottom: 0;
       transition: bottom 0.3s;
+      overflow: hidden;
 
       @media @desktop {
         width: 413px;
@@ -300,12 +301,26 @@
         gap: 24px;
       }
 
+      &:before {
+        display: block;
+        content: '';
+        width: 194px;
+        height: 194px;
+        background: linear-gradient(90deg, #48CEFF 0%, #FFD12C 100.17%);
+        filter: blur(50px);
+        position: absolute;
+        right: -97px;
+        top: -97px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
       &:hover {
         bottom: 10px;
-        background-image: url('./corner.svg');
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 150px;
+
+        &:before {
+          opacity: 1;
+        }
       }
 
       .contentIcon {
